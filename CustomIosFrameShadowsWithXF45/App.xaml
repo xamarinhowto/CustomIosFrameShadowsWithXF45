@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    x:Class="CustomIosFrameShadowsWithXF45.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <!--Global Styles-->
+            <Color
+                x:Key="PrimaryColor">#0993DB</Color>
+            <Color
+                x:Key="TextMediumColor">#777777</Color>
+            <Color
+                x:Key="PrimaryBrandColor">#0993DB</Color>
+            <Color
+                x:Key="PrimaryButtonColor">#0993DB</Color>
+            <Color
+                x:Key="NavigationPrimary">#0993DB</Color>
+            <Style
+                TargetType="NavigationPage">
+                <Setter
+                    Property="BarBackgroundColor"
+                    Value="{StaticResource NavigationPrimary}" />
+                <Setter
+                    Property="BarTextColor"
+                    Value="White" />
+            </Style>
+            <Style
+                TargetType="Switch">
+                <Setter
+                    Property="OnColor"
+                    Value="{DynamicResource PrimaryButtonColor}" />
+                <Setter
+                    Property="VerticalOptions"
+                    Value="Center" />
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

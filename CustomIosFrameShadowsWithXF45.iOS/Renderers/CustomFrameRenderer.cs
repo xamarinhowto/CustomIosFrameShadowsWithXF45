@@ -1,13 +1,4 @@
-# Introduction 
-
-This solution contains a working example of styling Frame shadows on iOS with Xamarin.Forms 4.5+.
-# Outcome
-![Customising iOS Frame shadows in Xamarin.Forms 4.5](iosframeshadows.jpg "Customising iOS Frame shadows in Xamarin.Forms 4.5")
-
-
-# Usage 
-```csharp
-using System;
+﻿using System;
 using CoreGraphics;
 using CustomIosFrameShadowsWithXF45.Controls;
 using CustomIosFrameShadowsWithXF45.iOS.Renderers;
@@ -62,5 +53,3 @@ namespace CustomIosFrameShadowsWithXF45.iOS.Renderers
         }
     }
 }
-
-```

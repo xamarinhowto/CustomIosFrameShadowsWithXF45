@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="CustomIosFrameShadowsWithXF45.Views.CustomFrameControlPage"
+    xmlns:vm="clr-namespace:CustomIosFrameShadowsWithXF45.ViewModels"
+    xmlns:controls="clr-namespace:CustomIosFrameShadowsWithXF45.Controls"
+    xmlns:segmented="clr-namespace:SegmentedControl.FormsPlugin.Abstractions;assembly=SegmentedControl.FormsPlugin.Abstractions"
+    Title="{Binding Title}">
+    <ContentPage.BindingContext>
+        <vm:FrameControlViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout
+            Orientation="Vertical"
+            Padding="16"
+            Spacing="16">
+            <Label
+                Text="Customising iOS Frame Shadows Xamarin.Forms XF4.5+"
+                HorizontalTextAlignment="Center"
+                TextColor="{StaticResource PrimaryBrandColor}"
+                VerticalOptions="Center" />
+            <controls:CustomSegmentedControl
+                ValueChanged="FrameShadowType_Changed"
+                TintColor="#0456A2"
+                BackgroundColor="#553678B5"
+                SelectedTextColor="#F1F1F2"
+                Margin="0">
+                <segmented:SegmentedControl.Children>
+                    <segmented:SegmentedControlOption
+                        Text="Default" />
+                    <segmented:SegmentedControlOption
+                        Text="Customised" />
+                    <segmented:SegmentedControlOption
+                        Text="No shadow" />
+                </segmented:SegmentedControl.Children>
+            </controls:CustomSegmentedControl>
+            <Grid>
+                <Grid>
+                    <Frame
+                        HasShadow="True"
+                        x:Name="DefaultFrame">
+                        <Label
+                            Text="This is the default frame without anything special"
+                            VerticalOptions="Center"
+                            HorizontalOptions="Center"
+                            HorizontalTextAlignment="Center"
+                            VerticalTextAlignment="Center"
+                            TextColor="{StaticResource PrimaryBrandColor}" />
+                    </Frame>
+                </Grid>
+                <Grid>
+                    <controls:CustomFrame
+                        x:Name="CustomFrame">
+                        <Label
+                            Text="This is a custom Frame with a custom renderer controlling the shadow"
+                            VerticalOptions="Center"
+                            HorizontalOptions="Center"
+                            HorizontalTextAlignment="Center"
+                            VerticalTextAlignment="Center"
+                            TextColor="{StaticResource PrimaryBrandColor}" />
+                    </controls:CustomFrame>
+                </Grid>
+                <Grid>
+                    <Frame
+                        BackgroundColor="{StaticResource PrimaryBrandColor}"
+                        x:Name="NoShadowFrame"
+                        HasShadow="False">
+                        <Label
+                            Text="This is the default frame with HasShadow = False"
+                            VerticalOptions="Center"
+                            HorizontalOptions="Center"
+                            HorizontalTextAlignment="Center"
+                            VerticalTextAlignment="Center"
+                            TextColor="White" />
+                    </Frame>
+                </Grid>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
