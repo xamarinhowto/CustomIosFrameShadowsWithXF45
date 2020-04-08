@@ -50,7 +50,7 @@ namespace CustomIosFrameShadowsWithXF45.iOS.Renderers
 
         private void SetFrameShadow()
         {
-            if (Element != null && Element.HasShadow)// && Element is CustomFrame)
+            if (Element != null && Element.HasShadow)
             {
                 if (Superview != null && Superview.Subviews != null)
                 {
