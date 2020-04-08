@@ -14,14 +14,8 @@ namespace CustomIosFrameShadowsWithXF45.Views
             SetFrame(e.NewValue);
         }
 
-        bool firstLoad = true;
         private void SetFrame(int frame)
         {
-            if (firstLoad)
-            {
-                firstLoad = false;
-                return;
-            }
             // Hide all
             DefaultFrame.IsVisible = CustomFrame.IsVisible = NoShadowFrame.IsVisible = false;
 
@@ -43,17 +37,6 @@ namespace CustomIosFrameShadowsWithXF45.Views
         public CustomFrameControlPage()
         {
             InitializeComponent();
-            //Task.Delay(2500)MainThread.BeginInvokeOnMainThread(() =>
-            //{
-            //    SetFrame(0);
-            //});
-        }
-
-        protected override void OnAppearing()
-        {
-            base.OnAppearing();
-
-            //SetFrame(0);
         }
     }
 }
